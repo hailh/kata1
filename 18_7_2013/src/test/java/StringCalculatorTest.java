@@ -11,61 +11,68 @@ import static org.junit.Assert.assertTrue;
  */
 public class StringCalculatorTest {
     @Test
-    public void addWithEmptyStringTest() {
+    public void addWithEmptyStringTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("") == 0);
     }
 
     @Test
-    public void addWithStringHasOneNumberTest() {
+    public void addWithStringHasOneNumberTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1") == 1);
     }
 
     @Test
-    public void addWithStringHasTwoNumbersTest() {
+    public void addWithStringHasTwoNumbersTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1,2") == 3);
     }
 
     @Test
-    public void addWithStringHasNewLineValidBetweenNumbersTest() {
+    public void addWithStringHasNewLineValidBetweenNumbersTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1\n2,3") == 6);
     }
 
     @Test
-    public void addWithStringHasNewLineInvalidBetweenNumbersTest(){
+    public void addWithStringHasNewLineInvalidBetweenNumbersTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
-        assertTrue(calculator.add("1,\n2")== 3);
+        try {
+            calculator.add("1,\n2");
+            assertTrue(false);
+        } catch (NegativeNumberException e) {
+            assertTrue(true);
+        } catch (UnknownAmountNumberException e) {
+            assertTrue(true);
+        }
     }
 
     @Test
-    public void addWithStringHasNewDelimiterTest(){
+    public void addWithStringHasNewDelimiterTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("//[;]\n1;2") == 3);
     }
 
     @Test
-    public void addWithStringHasNumberGreater1000Test(){
+    public void addWithStringHasNumberGreater1000Test() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1001,2") == 2);
     }
 
     @Test
-    public void addWithStringHasNewDelimiterWithAnyLengthTest(){
+    public void addWithStringHasNewDelimiterWithAnyLengthTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("//[---]\n1---2") == 3);
     }
 
     @Test
-    public void addWithStringHasManyDelimiterTest(){
+    public void addWithStringHasManyDelimiterTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("//[a][b]\n1a2b3") == 6);
     }
 
     @Test
-    public void addWithStringHasManyDelimiterLengthGreaterThanOneTest(){
+    public void addWithStringHasManyDelimiterLengthGreaterThanOneTest() throws UnknownAmountNumberException, NegativeNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("//[aaa][bb]\n1aaa2bb3") == 6);
     }
