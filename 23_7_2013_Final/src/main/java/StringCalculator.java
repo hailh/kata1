@@ -25,7 +25,7 @@ public class StringCalculator {
                 int total = 0;
                 String[] listNumber = numbers.split(delimiter);
                 for(String number : listNumber){
-                    int tempNumber = Integer.parseInt(number);
+                    int tempNumber = (Integer.parseInt(number) > 1000 ? 0 : Integer.parseInt(number));
                     total += tempNumber;
                 }
                 return total;
