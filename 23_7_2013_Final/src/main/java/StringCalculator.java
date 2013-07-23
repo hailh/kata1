@@ -17,8 +17,10 @@ public class StringCalculator {
             String delimiter = DEFAULT_DELIMITERS;
             if(numbers.contains(POSTFIX_OF_NEW_DELIMITERS)){
                 String delimiterStringPath = numbers.split(SEPARATE_DELIMITERS_AND_NUMBERS)[0].replace(POSTFIX_OF_NEW_DELIMITERS, "");
-                String newDelimiter = delimiterStringPath.substring(1,delimiterStringPath.length()-1);
-                delimiter += "|" + newDelimiter;
+                String[] listDelimiter = delimiterStringPath.substring(1,delimiterStringPath.length()-1).split("\\]\\[");
+                for(String item : listDelimiter){
+                    delimiter += "|" + item;
+                }
                 numbers = numbers.substring(numbers.indexOf(SEPARATE_DELIMITERS_AND_NUMBERS) + 1, numbers.length());
             }
             try {
