@@ -9,7 +9,9 @@ public class StringCalculator {
     public int add(String numbers) {
         if(numbers.isEmpty()) {
             return 0;
+        } else {
+            int total = Integer.parseInt(numbers);
+            return total;
         }
-        return -1;
     }
 }
