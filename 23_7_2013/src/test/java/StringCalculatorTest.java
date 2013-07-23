@@ -56,4 +56,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1001,2") == 2);
     }
+
+    @Test
+    public void addWithStringHasNewDelimiterWithAnyLengthTest() throws UnknownAmountNumberException{
+        StringCalculator calculator = new StringCalculator();
+        assertTrue(calculator.add("//[---]\n1---2") == 3);
+    }
 }
