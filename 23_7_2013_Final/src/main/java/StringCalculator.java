@@ -10,7 +10,7 @@ public class StringCalculator {
     public static final String POSTFIX_OF_NEW_DELIMITERS = "//";
     public static final String SEPARATE_DELIMITERS_AND_NUMBERS = "\n";
     public static final int MAX_NUMBER = 1000;
-    public int add(String numbers) throws UnknownAmountNumberException {
+    public int add(String numbers) throws UnknownAmountNumberException, NegativeNumberException {
         if(numbers.isEmpty()) {
             return 0;
         } else {
@@ -28,6 +28,7 @@ public class StringCalculator {
                 String[] listNumber = numbers.split(delimiter);
                 for(String number : listNumber){
                     int tempNumber = (Integer.parseInt(number) > MAX_NUMBER ? 0 : Integer.parseInt(number));
+                    if(tempNumber < 0) throw new NegativeNumberException();
                     total += tempNumber;
                 }
                 return total;
