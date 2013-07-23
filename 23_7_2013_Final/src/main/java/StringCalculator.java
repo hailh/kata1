@@ -6,7 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 public class StringCalculator {
-    public static final String DEFAULT_DELIMITERS = ",";
+    public static final String DEFAULT_DELIMITERS = ",|\n";
     public int add(String numbers) {
         if(numbers.isEmpty()) {
             return 0;
