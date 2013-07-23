@@ -15,4 +15,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("") == 0);
     }
+
+    @Test
+    public void addWithStringHasOneNumberTest(){
+        StringCalculator calculator = new StringCalculator();
+        assertTrue(calculator.add("1") == 1);
+    }
 }
