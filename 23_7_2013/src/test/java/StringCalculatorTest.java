@@ -11,25 +11,25 @@ import static junit.framework.Assert.assertTrue;
  */
 public class StringCalculatorTest {
     @Test
-    public void addWithEmptyStringTest(){
+    public void addWithEmptyStringTest() throws UnknownAmountNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("") == 0);
     }
 
     @Test
-    public void addWithStringHasOneNumberTest(){
+    public void addWithStringHasOneNumberTest() throws UnknownAmountNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1") == 1);
     }
 
     @Test
-    public void addWithStringHasTwoNumbersTest(){
+    public void addWithStringHasTwoNumbersTest() throws UnknownAmountNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1,2") == 3);
     }
 
     @Test
-    public void addWithStringHasNewLineValidBetweenNumbersTest(){
+    public void addWithStringHasNewLineValidBetweenNumbersTest() throws UnknownAmountNumberException {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1\n2,3") == 6);
     }
@@ -37,6 +37,11 @@ public class StringCalculatorTest {
     @Test
     public void addWithStringHasNewLineInvalidBetweenNumbersTest() throws UnknownAmountNumberException{
         StringCalculator calculator = new StringCalculator();
-        calculator.add("1,\n2");
+        try {
+            calculator.add("1,\n2");
+            assertTrue(false);
+        } catch (UnknownAmountNumberException e) {
+            assertTrue(true);
+        }
     }
 }

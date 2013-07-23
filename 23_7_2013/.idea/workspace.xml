@@ -70,7 +70,7 @@
       <file leaf-file-name="StringCalculatorTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/StringCalculatorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="8" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.7567084">
+            <state line="41" column="30" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.63506263">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,19 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnknownAmountNumberException.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UnknownAmountNumberException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="46" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StringCalculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/StringCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="59" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+            <state line="29" column="43" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -107,8 +98,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/main/java/UnknownAmountNumberException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/StringCalculatorTest.java" />
       </list>
     </option>
@@ -522,21 +513,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/UnknownAmountNumberException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="46" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+        <state line="15" column="46" selection-start="424" selection-end="424" vertical-scroll-proportion="0.45617172">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="59" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+        <state line="29" column="43" selection-start="906" selection-end="906" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/StringCalculatorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="8" selection-start="1164" selection-end="1164" vertical-scroll-proportion="0.7567084">
+        <state line="41" column="30" selection-start="1385" selection-end="1385" vertical-scroll-proportion="0.63506263">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

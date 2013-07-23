@@ -8,18 +8,22 @@
 public class StringCalculator {
     public static final String DEFAULT_DELIMITERS = ",|\n";
 
-    public int add(String numbers) {
+    public int add(String numbers) throws UnknownAmountNumberException {
         if(numbers.isEmpty()) {
             return 0;
         } else {
-            int total = 0;
-            String delimiter = DEFAULT_DELIMITERS;
-            String[] listNumber = numbers.split(delimiter);
-            for(String number : listNumber){
-                int tempNumber = Integer.parseInt(number);
-                total += tempNumber;
+            try {
+                int total = 0;
+                String delimiter = DEFAULT_DELIMITERS;
+                String[] listNumber = numbers.split(delimiter);
+                for(String number : listNumber){
+                    int tempNumber = Integer.parseInt(number);
+                    total += tempNumber;
+                }
+                return total;
+            } catch (Exception exception) {
+                throw new UnknownAmountNumberException(exception);
             }
-            return total;
         }
     }
 }
