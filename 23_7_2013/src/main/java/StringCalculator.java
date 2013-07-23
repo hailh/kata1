@@ -7,14 +7,22 @@
  */
 public class StringCalculator {
     public static final String DEFAULT_DELIMITERS = ",|\n";
+    public static final String POSTFIX_OF_NEW_DELIMITERS = "//";
+    public static final String SEPARATE_DELIMITERS_AND_NUMBERS = "\n";
 
     public int add(String numbers) throws UnknownAmountNumberException {
         if(numbers.isEmpty()) {
             return 0;
         } else {
+            int total = 0;
+            String delimiter = DEFAULT_DELIMITERS;
+            if(numbers.contains(POSTFIX_OF_NEW_DELIMITERS)){
+                String delimiterStringPath = numbers.split(SEPARATE_DELIMITERS_AND_NUMBERS)[0].replace(POSTFIX_OF_NEW_DELIMITERS, "");
+                String newDelimiter = delimiterStringPath.substring(1,delimiterStringPath.length()-1);
+                delimiter += "|" + newDelimiter;
+                numbers = numbers.substring(numbers.indexOf(SEPARATE_DELIMITERS_AND_NUMBERS) + 1, numbers.length());
+            }
             try {
-                int total = 0;
-                String delimiter = DEFAULT_DELIMITERS;
                 String[] listNumber = numbers.split(delimiter);
                 for(String number : listNumber){
                     int tempNumber = Integer.parseInt(number);
