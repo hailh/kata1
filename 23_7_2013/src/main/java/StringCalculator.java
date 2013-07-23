@@ -6,10 +6,7 @@
  * To change this template use File | Settings | File Templates.
  */
 public class StringCalculator {
-    public static final String DEFAULT_DELIMITERS = ",|\n";
-    public static final String POSTFIX_OF_NEW_DELIMITERS = "//";
-    public static final String SEPARATE_DELIMITERS_AND_NUMBERS = "\n";
-    public static final int MAX_NUMBER = 1000;
+    public static final String DEFAULT_DELIMITERS = ",";
 
     public int add(String numbers) {
         if(numbers.isEmpty()) {
