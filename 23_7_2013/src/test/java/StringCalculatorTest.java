@@ -33,4 +33,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1\n2,3") == 6);
     }
+
+    @Test
+    public void addWithStringHasNewLineInvalidBetweenNumbersTest() throws UnknownAmountNumberException{
+        StringCalculator calculator = new StringCalculator();
+        calculator.add("1,\n2");
+    }
 }
