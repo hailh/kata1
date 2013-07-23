@@ -16,7 +16,12 @@ public class StringCalculator {
             return 0;
         } else {
             int total = 0;
-            total += Integer.parseInt(numbers);
+            String delimiter = DEFAULT_DELIMITERS;
+            String[] listNumber = numbers.split(delimiter);
+            for(String number : listNumber){
+                int tempNumber = Integer.parseInt(number);
+                total += tempNumber;
+            }
             return total;
         }
     }
