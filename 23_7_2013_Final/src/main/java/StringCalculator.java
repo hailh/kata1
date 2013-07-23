@@ -6,11 +6,17 @@
  * To change this template use File | Settings | File Templates.
  */
 public class StringCalculator {
+    public static final String DEFAULT_DELIMITERS = ",";
     public int add(String numbers) {
         if(numbers.isEmpty()) {
             return 0;
         } else {
-            int total = Integer.parseInt(numbers);
+            int total = 0;
+            String[] listNumber = numbers.split(DEFAULT_DELIMITERS);
+            for(String number : listNumber){
+                int tempNumber = Integer.parseInt(number);
+                total += tempNumber;
+            }
             return total;
         }
     }
