@@ -21,4 +21,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1") == 1);
     }
+
+    @Test
+    public void addWithStringHasTwoNumbersTest(){
+        StringCalculator calculator = new StringCalculator();
+        assertTrue(calculator.add("1,2") == 3);
+    }
 }
