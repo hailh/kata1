@@ -81,7 +81,7 @@
       <file leaf-file-name="StringCalculator.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/StringCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="9" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+            <state line="25" column="10" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,8 +98,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/StringCalculator.java" />
         <option value="$PROJECT_DIR$/src/test/java/StringCalculatorTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/StringCalculator.java" />
       </list>
     </option>
   </component>
@@ -512,7 +512,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/StringCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="9" selection-start="289" selection-end="289" vertical-scroll-proportion="0.0">
+        <state line="25" column="10" selection-start="893" selection-end="893" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
