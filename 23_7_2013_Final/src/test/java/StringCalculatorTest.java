@@ -27,4 +27,10 @@ public class StringCalculatorTest {
         StringCalculator calculator = new StringCalculator();
         assertTrue(calculator.add("1,2") == 3);
     }
+
+    @Test
+    public void addWithStringHasNewLineValidBetweenNumbersTest(){
+        StringCalculator calculator = new StringCalculator();
+        assertTrue(calculator.add("1\n2,3") == 6);
+    }
 }
