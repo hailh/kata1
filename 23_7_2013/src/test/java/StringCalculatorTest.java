@@ -44,4 +44,10 @@ public class StringCalculatorTest {
             assertTrue(true);
         }
     }
+
+    @Test
+    public void addWithStringHasNewDelimiterTest() throws UnknownAmountNumberException{
+        StringCalculator calculator = new StringCalculator();
+        assertTrue(calculator.add("//[;]\n1;2") == 3);
+    }
 }
